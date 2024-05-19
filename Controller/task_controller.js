@@ -24,13 +24,13 @@ const create_task = async (req, res) => {
         taskData.user = user;
         taskData.save();
 
-        user.task.push(new mongoose.Types.ObjectId(task._id));
+        user.task.push(new mongoose.Types.ObjectId(taskData._id));
         user.save();
 
         res.status(201).json({
             status: "Success",
             message: "Task was created successfully",
-            data: task
+            data: taskData
         });
     } catch (error) {
         res.status(500).json({
