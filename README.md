@@ -18,6 +18,8 @@
   `POST http://localhost:1111/api/user/signin`  
   Logs in a user and returns a JWT token.
 
+  When the user Login a token will be generated. Then, copy that token and paste it in the bearer token input in Postman for authorization
+
 ### Task Endpoints
 
 - **Create Task**  
@@ -39,3 +41,4 @@
 - **Delete Task**  
   `DELETE http://localhost:1111/api/task/delete/:taskId`  
   Deletes a task by its ID.
+  
